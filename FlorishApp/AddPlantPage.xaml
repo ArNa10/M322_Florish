@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+             x:Class="FlorishApp.AddPlantPage">
+    <ContentPage.Content>
+        <VerticalStackLayout Spacing="0">
+
+            <!-- HEADER -->
+            <Grid BackgroundColor="{StaticResource PrimaryGreen}" Padding="15">
+                <Label Text="Florish"
+                       TextColor="White"
+                       FontSize="22"
+                       FontAttributes="Bold" />
+            </Grid>
+
+            <!-- CONTENT -->
+            <ScrollView>
+                <VerticalStackLayout Padding="20" Spacing="15">
+
+                    <Label Text="Pflanze hinzufügen"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+
+                    <Entry 
+                        x:Name="nameEntry"
+                        TextColor="Black"
+                        Placeholder="Name" />
+                    <Label
+                        x:Name="errorLabel"
+                        TextColor="Red"
+                        IsVisible="False" />
+
+                    <Picker 
+                        x:Name="artPicker"
+                            BackgroundColor="#5AAB61"
+                        Title="Art"
+                        TitleColor="Black">
+                        <Picker.Items>
+                            <x:String>Zimmerpflanze</x:String>
+                            <x:String>Gartenpflanze</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Picker 
+                        x:Name="standortPicker"
+                        BackgroundColor="#5AAB61"
+                        Title="Standort"
+                        TitleColor="Black">
+                        <Picker.Items>
+                            <x:String>Sonne</x:String>
+                            <x:String>Halbschatten</x:String>
+                            <x:String>Schatten</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="Wasserintervall (Tage)" />
+                        <Stepper 
+                            BackgroundColor="#5AAB61"
+                            x:Name="wasserStepper"
+                            Minimum="1" Maximum="30" />
+                    </HorizontalStackLayout>
+
+                    <Label Text="Letzte Bewässerung"></Label>
+                    <DatePicker
+                        BackgroundColor="#5AAB61"
+                        x:Name="datePicker"/>
+
+                    <!-- BUTTONS -->
+                    <HorizontalStackLayout Spacing="10">
+                        <Button Text="Abbrechen"
+                                Clicked="OnCancelClicked"
+                                BackgroundColor="#CCCCCC"
+                                TextColor="Black"
+                                HorizontalOptions="FillAndExpand" />
+
+                        <Button Text="Pflanze hinzufügen"
+                                Clicked="OnAddPlantClicked" 
+                                BackgroundColor="{StaticResource PrimaryGreen}"
+                                TextColor="White"
+                                HorizontalOptions="FillAndExpand" />
+                    </HorizontalStackLayout>
+
+                </VerticalStackLayout>
+            </ScrollView>
+
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

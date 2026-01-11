@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="White"
+             x:Class="FlorishApp.PlantInfoPage">
+    <ContentPage.Content>
+            <VerticalStackLayout Spacing="0">
+
+                <!-- HEADER -->
+                <Grid BackgroundColor="{StaticResource PrimaryGreen}" Padding="15">
+                    <Label Text="Florish"
+                           TextColor="White"
+                           FontSize="22"
+                           FontAttributes="Bold" />
+                </Grid>
+
+                <!-- CONTENT -->
+                <ScrollView>
+                    <VerticalStackLayout Padding="20" Spacing="12">
+
+                        <Image Source="dotnet_bot.png"
+                               HeightRequest="180" />
+
+                        <Label x:Name="nameLabel" FontSize="20" FontAttributes="Bold" />
+                        <Label x:Name="artLabel" />
+                        <Label x:Name="standortLabel" />
+                        <Label x:Name="wasserLabel" />
+                        <Label x:Name="datumLabel" />
+
+                        <Label Text="Nächste Bewässerung: 27.11.2025"
+                               FontAttributes="Bold" />
+
+                        <Button Text="Pflanze löschen"
+                                BackgroundColor="DarkRed"
+                                TextColor="White" />
+                        <Button
+                            Text="Zurück"
+                            Clicked="OnBackClicked"
+                            BackgroundColor="#CCCCCC" />
+
+
+                    </VerticalStackLayout>
+                </ScrollView>
+            </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

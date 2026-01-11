@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FlorishApp"
+             x:Class="FlorishApp.MainPage"
+             BackgroundColor="White"
+             Shell.NavBarIsVisible="False">
+
+    <VerticalStackLayout Spacing="0">
+
+        <!-- HEADER -->
+        <VerticalStackLayout
+            BackgroundColor="{StaticResource PrimaryGreen}"
+            Padding="20"
+            Spacing="10">
+
+            <!-- Logo + Titel -->
+            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+
+                <Image
+                    Source="logo.png"
+                    WidthRequest="96"
+                    HeightRequest="96" />
+
+                <Label
+                    Text="Florish"
+                    FontSize="28"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <!-- Button unter Logo -->
+            <Button
+                Text="Pflanze hinzufügen"
+                HorizontalOptions="Start"
+                BackgroundColor="White"
+                TextColor="{StaticResource PrimaryGreen}" 
+                Clicked="OnAddPlantClicked"/>
+        </VerticalStackLayout>
+
+        <!-- CONTENT -->
+        <VerticalStackLayout Padding="20">
+            <CollectionView x:Name="PlantsCollection">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="10" Margin="0,5">
+                            <VerticalStackLayout>
+                                <Label Text="Monstera" FontAttributes="Bold" />
+                                <Label Text="{Binding WasserIntervall, StringFormat='Giessen alle {0} Tage'}" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
