@@ -40,8 +40,8 @@
                 <ImageButton
                     Grid.Column="1"
                     Source="help.png"
-                    WidthRequest="150"
-                    HeightRequest="150"
+                    WidthRequest="100"
+                    HeightRequest="100"
                     BackgroundColor="Transparent"
                     Clicked="OnHelpClicked"/>
             </Grid>
@@ -84,7 +84,7 @@
                                     TextColor="Black"/>
 
                                 <Label
-                                    Text="{Binding WasserIntervall, StringFormat='Gießen alle {0} Tage'}"
+                                    Text="{Binding WasserIntervall, StringFormat='Giessen alle {0} Tage'}"
                                     TextColor="Gray"/>
                             </VerticalStackLayout>
 

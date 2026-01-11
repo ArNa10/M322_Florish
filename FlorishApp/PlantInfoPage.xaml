@@ -34,12 +34,13 @@
                         <Label x:Name="datumLabel" />
                         <Label x:Name="giftigLabel"/>
 
-                        <Label Text="Nächste Bewässerung: 27.11.2025"
-                               FontAttributes="Bold" />
+                        <Label x:Name="nextWateringLabel" />
+
 
                         <Button Text="Pflanze löschen"
                                 BackgroundColor="DarkRed"
-                                TextColor="White" />
+                                TextColor="White" 
+                                Clicked="OnDeleteClicked"/>
                         <Button
                             Text="Zurück"
                             Clicked="OnBackClicked"

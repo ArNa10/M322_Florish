@@ -24,23 +24,109 @@
                 <ScrollView>
                     <VerticalStackLayout Padding="20" Spacing="15">
 
-                        <Label Text="Häufig gestellte Fragen"
+                        <Label Text="Häufige Fragen zu Florish"
                                FontSize="20"
                                FontAttributes="Bold" />
 
-                        <VerticalStackLayout>
-                            <Label Text="Frage" FontAttributes="Bold" />
-                            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                        <VerticalStackLayout Spacing="6" Margin="0,0,0,20">
+                            <Label Text="Frage: Wozu dient die App Florish?" 
+                                   FontAttributes="Bold" 
+                                   FontSize="18"/>
+                            
+                            <Label Text="Antwort:" 
+                                   FontAttributes="Bold"
+                                   FontSize="14"
+                                   TextColor="#CA9F79"/>
+                            
+                            <Label Text="Florish hilft dabei, Zimmerpflanzen übersichtlich zu verwalten. Nutzer können Pflanzen erfassen, Pflegeintervalle festlegen und wichtige Informationen wie Standort oder Giftigkeit dokumentieren." 
+                                   FontSize="15"/>
                         </VerticalStackLayout>
 
-                        <VerticalStackLayout>
-                            <Label Text="Frage" FontAttributes="Bold" />
-                            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                        <VerticalStackLayout Spacing="6" Margin="0,0,0,20">
+                            <Label Text="Frage: Wie füge ich eine neue Pflanze hinzu?" 
+                                   FontAttributes="Bold" 
+                                   FontSize="18"/>
+                            
+                            <Label Text="Antwort:" 
+                                   FontAttributes="Bold"
+                                   FontSize="14"
+                                   TextColor="#CA9F79" />
+                            
+                            <Label Text="Über den Button „Pflanze hinzufügen“ auf der Startseite gelangst du zum Eingabeformular. Dort trägst du alle notwendigen Informationen ein und bestätigst mit Hinzufügen." 
+                                   FontSize="15"/>
                         </VerticalStackLayout>
-
+                        
+                        <VerticalStackLayout Spacing="6" Margin="0,0,0,20">
+                            <Label Text="Frage: Was bedeutet das Giessintervall?" 
+                                   FontAttributes="Bold" 
+                                   FontSize="18"/>
+                            
+                            <Label Text="Antwort:" 
+                                   FontAttributes="Bold"
+                                   FontSize="14"
+                                   TextColor="#CA9F79" />
+                            
+                            <Label Text="Das Giessintervall gibt an, nach wie vielen Tagen die Pflanze erneut gegossen werden sollte. Der Wert kann über einen Slider individuell angepasst werden." 
+                                   FontSize="15"/>
+                        </VerticalStackLayout>
+                        
+                        <VerticalStackLayout Spacing="6" Margin="0,0,0,20">
+                            <Label Text="Frage: Warum soll ich angeben, ob eine Pflanze giftig ist?" 
+                                   FontAttributes="Bold" 
+                                   FontSize="18"/>
+                            
+                            <Label Text="Antwort:" 
+                                   FontAttributes="Bold"
+                                   FontSize="14"
+                                   TextColor="#CA9F79" />
+                            
+                            <Label Text="Diese Information ist besonders wichtig für Haushalte mit Kindern oder Haustieren. Florish zeigt klar an, ob eine Pflanze potenziell gefährlich ist." 
+                                   FontSize="15"/>
+                        </VerticalStackLayout>
+                        
+                        <VerticalStackLayout Spacing="6" Margin="0,0,0,20">
+                            <Label Text="Frage: Kann ich meine Eingaben später ändern?" 
+                                   FontAttributes="Bold" 
+                                   FontSize="18"/>
+                            
+                            <Label Text="Antwort:" 
+                                   FontAttributes="Bold"
+                                   FontSize="14"
+                                   TextColor="#CA9F79" />
+                            
+                            <Label Text="In der aktuellen Version können Pflanzen angesehen, aber noch nicht bearbeitet werden. Eine Bearbeitungsfunktion ist für zukünftige Versionen geplant." 
+                                   FontSize="15"/>
+                        </VerticalStackLayout>
+                        
+                        <VerticalStackLayout Spacing="6" Margin="0,0,0,20">
+                            <Label Text="Frage: Auf welchen Geräten kann Florish verwendet werden?" 
+                                   FontAttributes="Bold" 
+                                   FontSize="18"/>
+                            
+                            <Label Text="Antwort:" 
+                                   FontAttributes="Bold"
+                                   FontSize="14"
+                                   TextColor="#CA9F79" />
+                            
+                            <Label Text="Florish wurde als Desktop-Applikation mit .NET MAUI entwickelt und ist für Windows optimiert." 
+                                   FontSize="15"/>
+                        </VerticalStackLayout>
+                        
+                        <VerticalStackLayout Spacing="6" Margin="0,0,0,20">
+                            <Label Text="Frage: Werden meine Daten gespeichert?" 
+                                   FontAttributes="Bold" 
+                                   FontSize="18"/>
+                            
+                            <Label Text="Antwort:" 
+                                   FontAttributes="Bold"
+                                   FontSize="14"
+                                   TextColor="#CA9F79" />
+                            
+                            <Label Text="Die Daten werden während der Nutzung der App gespeichert. Eine dauerhafte Speicherung (z. B. nach einem Neustart) ist derzeit nicht vorgesehen."
+                                   FontSize="15"/>
+                        </VerticalStackLayout>
                     </VerticalStackLayout>
                 </ScrollView>
-
             </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>
