@@ -29,15 +29,17 @@ public partial class AddPlantPage : ContentPage
             Name = nameEntry.Text,
             Art = artPicker.SelectedItem?.ToString(),
             Standort = standortPicker.SelectedItem?.ToString(),
-            WasserIntervall = (int)wasserStepper.Value,
-            LetzteBewässerung = datePicker.Date!.Value
+            WasserIntervall = (int)wasserSlider.Value,
+            LetzteBewässerung = datePicker.Date!.Value,
+            IstGiftig = giftigCheckBox.IsChecked
+
         };
         PlantRepository.Plants.Add(plant);
 
-        await Shell.Current.GoToAsync(nameof(PlantInfoPage), new Dictionary<string, object>
-        {
-            { "Plant", plant }
-        });
+        int index = PlantRepository.Plants.Count - 1;
+
+        await Shell.Current.GoToAsync($"{nameof(PlantInfoPage)}?index={index}");
+
     }
 
     private async void OnCancelClicked(object sender, EventArgs e)

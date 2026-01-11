@@ -9,6 +9,11 @@
 
                 <!-- HEADER -->
                 <Grid BackgroundColor="{StaticResource PrimaryGreen}" Padding="15">
+                    <Image
+                        Source="logo.png"
+                        WidthRequest="80"
+                        HeightRequest="80"/>
+                    
                     <Label Text="Florish"
                            TextColor="White"
                            FontSize="22"

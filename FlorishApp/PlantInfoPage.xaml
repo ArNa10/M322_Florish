@@ -9,6 +9,11 @@
 
                 <!-- HEADER -->
                 <Grid BackgroundColor="{StaticResource PrimaryGreen}" Padding="15">
+                    <Image
+                        Source="logo.png"
+                        WidthRequest="80"
+                        HeightRequest="80"/>
+                    
                     <Label Text="Florish"
                            TextColor="White"
                            FontSize="22"
@@ -27,6 +32,7 @@
                         <Label x:Name="standortLabel" />
                         <Label x:Name="wasserLabel" />
                         <Label x:Name="datumLabel" />
+                        <Label x:Name="giftigLabel"/>
 
                         <Label Text="Nächste Bewässerung: 27.11.2025"
                                FontAttributes="Bold" />

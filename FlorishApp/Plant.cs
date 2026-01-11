@@ -7,4 +7,7 @@ public class Plant
     public string Standort { get; set; }
     public int WasserIntervall { get; set; }
     public DateTime LetzteBewässerung { get; set; }
+    
+    public bool IstGiftig { get; set; }
+
 }

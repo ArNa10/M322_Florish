@@ -15,20 +15,36 @@
             Spacing="10">
 
             <!-- Logo + Titel -->
-            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+            <Grid
+                BackgroundColor="{StaticResource PrimaryGreen}"
+                Padding="20"
+                ColumnDefinitions="*,Auto"
+                VerticalOptions="Start">
 
-                <Image
-                    Source="logo.png"
-                    WidthRequest="96"
-                    HeightRequest="96" />
+                <!-- LINKS: Logo + Titel -->
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                    <Image
+                        Source="logo.png"
+                        WidthRequest="80"
+                        HeightRequest="80"/>
 
-                <Label
-                    Text="Florish"
-                    FontSize="28"
-                    FontAttributes="Bold"
-                    TextColor="White"
-                    VerticalOptions="Center" />
-            </HorizontalStackLayout>
+                    <Label
+                        Text="Florish"
+                        FontSize="28"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+
+                <!-- RECHTS: Hilfe-Icon -->
+                <ImageButton
+                    Grid.Column="1"
+                    Source="help.png"
+                    WidthRequest="150"
+                    HeightRequest="150"
+                    BackgroundColor="Transparent"
+                    Clicked="OnHelpClicked"/>
+            </Grid>
 
             <!-- Button unter Logo -->
             <Button
@@ -40,15 +56,38 @@
         </VerticalStackLayout>
 
         <!-- CONTENT -->
-        <VerticalStackLayout Padding="20">
-            <CollectionView x:Name="PlantsCollection">
+        <VerticalStackLayout Padding="20" VerticalOptions="FillAndExpand">
+            <CollectionView x:Name="PlantsCollection"
+                            SelectionMode="Single"
+                            SelectionChanged="OnPlantSelected"
+                            VerticalOptions="FillAndExpand"
+                            BackgroundColor="White">
+
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame Padding="10" Margin="0,5">
+                        <Frame
+                            BackgroundColor="#F5F5F5"
+                            BorderColor="#358856"
+                            CornerRadius="12"
+                            Padding="12"
+                            Margin="0,0,0,10">
+
                             <VerticalStackLayout>
-                                <Label Text="Monstera" FontAttributes="Bold" />
-                                <Label Text="{Binding WasserIntervall, StringFormat='Giessen alle {0} Tage'}" />
+                                <Label
+                                    Text="{Binding Name}"
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    TextColor="Black"/>
+
+                                <Label
+                                    Text="{Binding Art}"
+                                    TextColor="Black"/>
+
+                                <Label
+                                    Text="{Binding WasserIntervall, StringFormat='Gießen alle {0} Tage'}"
+                                    TextColor="Gray"/>
                             </VerticalStackLayout>
+
                         </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

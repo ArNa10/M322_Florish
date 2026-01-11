@@ -9,6 +9,11 @@
 
             <!-- HEADER -->
             <Grid BackgroundColor="{StaticResource PrimaryGreen}" Padding="15">
+                <Image
+                    Source="logo.png"
+                    WidthRequest="80"
+                    HeightRequest="80"/>
+                
                 <Label Text="Florish"
                        TextColor="White"
                        FontSize="22"
@@ -55,19 +60,25 @@
                         </Picker.Items>
                     </Picker>
 
-                    <HorizontalStackLayout Spacing="10">
-                        <Label Text="Wasserintervall (Tage)" />
-                        <Stepper 
-                            BackgroundColor="#5AAB61"
-                            x:Name="wasserStepper"
-                            Minimum="1" Maximum="30" />
-                    </HorizontalStackLayout>
+                    <Label Text="Giessintervall (Tage)" />
+                    <Slider
+                        x:Name="wasserSlider"
+                        Minimum="1"
+                        Maximum="30"
+                        Value="7"/>
+                    <Label
+                        Text="{Binding Source={x:Reference wasserSlider}, Path=Value, StringFormat='{0:F0} Tage'}"/>
 
                     <Label Text="Letzte Bewässerung"></Label>
                     <DatePicker
                         BackgroundColor="#5AAB61"
                         x:Name="datePicker"/>
-
+                    
+                    <HorizontalStackLayout Spacing="15">
+                        <Label Text="Giftig für Menschen/Tiere"/>
+                        <CheckBox x:Name="giftigCheckBox"/>
+                    </HorizontalStackLayout>
+                    
                     <!-- BUTTONS -->
                     <HorizontalStackLayout Spacing="10">
                         <Button Text="Abbrechen"
